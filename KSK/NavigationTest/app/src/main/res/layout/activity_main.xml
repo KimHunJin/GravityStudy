@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gravity.sk392.navigationtest.NavigationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <!-- 왜 layout_gravity를 start로 하는 것이 중요할까 -->
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity ="start"
+        android:divider="#330000"
+        android:background = "#999999"
+        android:dividerHeight="1dp"
+        android:orientation="vertical">
+
+    </ListView>
+
+</android.support.v4.widget.DrawerLayout>
+
+    
