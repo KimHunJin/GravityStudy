@@ -1,6 +1,8 @@
 package com.gravity.sk392.navigationtest;
 
+import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +14,17 @@ import android.widget.TextView;
 public class ViewpagerAdapter extends PagerAdapter {
 
     LayoutInflater inflater;
+    Context context;
+    View first;
+    View second;
+    View third;
 
-    public ViewpagerAdapter(LayoutInflater inflater) {
+    public ViewpagerAdapter(LayoutInflater inflater, Context context) {
         // TODO Auto-generated constructor stub
 
         //전달 받은 LayoutInflater를 멤버변수로 전달
-        this.inflater=inflater;
+        this.inflater = inflater;
+        this.context = context;
     }
 
     //PagerAdapter가 가지고 잇는 View의 개수를 리턴
@@ -25,7 +32,7 @@ public class ViewpagerAdapter extends PagerAdapter {
     @Override
     public int getCount() {
         // TODO Auto-generated method stub
-        return 10; //이미지 개수 리턴(그림이 10개라서 10을 리턴)
+        return 3; //뷰페이저 총 페이지 수 리턴(엑티비티가 3개라 3을 리턴)
     }
 
     //ViewPager가 현재 보여질 Item(View객체)를 생성할 필요가 있는 때 자동으로 호출
@@ -36,25 +43,38 @@ public class ViewpagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         // TODO Auto-generated method stub
 
-        View view=null;
+        View view = null;
+        switch (position) {
+            case 0:
+                if (first == null) {
+                    view = inflater.inflate(R.layout.activity_first, null);
+                    new FirstActivity(context, view);
+                    first = view;
+                } else view = first;
+                break;
 
-        //새로운 View 객체를 Layoutinflater를 이용해서 생성
-        //만들어질 View의 설계는 res폴더>>layout폴더>>viewpater_childview.xml 레이아웃 파일 사용
-        view= inflater.inflate(R.layout.viewpager_test, null);
+            case 1:
+                if (second == null) {
+                    view = inflater.inflate(R.layout.activity_second, null);
+                    new SecondActivity(context, view);
 
-        //만들어진 View안에 있는 StringView 객체 참조
-        //위에서 inflated 되어 만들어진 view로부터 findViewById()를 해야 하는 것에 주의.
-        TextView pagertextview =(TextView)view.findViewById(R.id.pagertext);
+                    second = view;
+                } else view = second;
+                break;
 
-        //ImageView에 현재 position 번째에 해당하는 이미지를 보여주기 위한 작업
-        //현재 position에 해당하는 이미지를 setting
-        pagertextview.setText("이 페이지는 " + position +"째 페이지입니다.");
-        //ViewPager에 만들어 낸 View 추가
+            case 2:
+                if (third == null) {
+                    view = inflater.inflate(R.layout.activity_third, null);
+                    new ThirdActivity(context, view);
+                    third = view;
+                } else view = third;
+                break;
+        }
         container.addView(view);
-
-        //Image가 세팅된 View를 리턴
         return view;
     }
+
+
 
     //화면에 보이지 않은 View는파괴를 해서 메모리를 관리함.
     //첫번째 파라미터 : ViewPager

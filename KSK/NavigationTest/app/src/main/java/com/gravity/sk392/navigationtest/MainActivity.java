@@ -22,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
     ActionBarDrawerToggle drawerToggle;
     String[] navListSetup= {"Notice", "FriendsList"};
     ViewPager pager;
-    Button prebtn, nextbtn;
+    Button firstbtn, secondbtn, thirdbtn;
     int position;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,15 +36,16 @@ public class MainActivity extends ActionBarActivity {
         //다만. ViewPager로 스크롤 될 수 있도록 되어 있다는 것이 다름
         //PagerAdapter를 상속받은 CustomAdapter 객체 생성
         //CustomAdapter에게 LayoutInflater 객체 전달
-        ViewpagerAdapter pageradapter= new ViewpagerAdapter(getLayoutInflater());
+        ViewpagerAdapter pageradapter= new ViewpagerAdapter(getLayoutInflater(),this);
 
         //ViewPager에 Adapter 설정
         pager.setAdapter(pageradapter);
 
-        prebtn = (Button)findViewById(R.id.pager_pre_btn);
-        nextbtn = (Button)findViewById(R.id.pager_next_btn);
+        firstbtn = (Button)findViewById(R.id.pager_first_btn);
+        secondbtn = (Button)findViewById(R.id.pager_second_btn);
+        thirdbtn = (Button)findViewById(R.id.pager_third_btn);
 
-        prebtn.setOnClickListener(new View.OnClickListener() {
+        firstbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -54,10 +55,10 @@ public class MainActivity extends ActionBarActivity {
                 //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
                 //첫번째 파라미터: 설정할 현재 위치
                 //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
-                pager.setCurrentItem(position-1,true);
+                pager.setCurrentItem(0,true);
             }
         });
-        nextbtn.setOnClickListener(new View.OnClickListener() {
+        secondbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -67,7 +68,20 @@ public class MainActivity extends ActionBarActivity {
                 //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
                 //첫번째 파라미터: 설정할 현재 위치
                 //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
-                pager.setCurrentItem(position+1,true);
+                pager.setCurrentItem(1,true);
+            }
+        });
+        thirdbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                position=pager.getCurrentItem();//현재 보여지는 아이템의 위치를 리턴
+
+                //현재 위치(position)에서 -1 을 해서 이전 position으로 변경
+                //이전 Item으로 현재의 아이템 변경 설정(가장 처음이면 더이상 이동하지 않음)
+                //첫번째 파라미터: 설정할 현재 위치
+                //두번째 파라미터: 변경할 때 부드럽게 이동하는가? false면 팍팍 바뀜
+                pager.setCurrentItem(2,true);
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

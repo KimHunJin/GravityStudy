@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.gravity.sk392.navigationtest.NavigationActivity">
 
-
     <!-- 왜 layout_gravity를 start로 하는 것이 중요할까 -->
     <ListView
         android:id="@+id/navList"
@@ -24,25 +23,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pager_pre_btn"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="pre" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/pager_next_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="next" />
+            <Button
+                android:id="@+id/pager_first_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="first" />
+
+            <Button
+                android:id="@+id/pager_second_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="second" />
+            <Button
+                android:id="@+id/pager_third_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="third" />
+        </LinearLayout>
+
+        <android:android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
-
-    <android:android.support.v4.view.ViewPager
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="50dp"
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 </android.support.v4.widget.DrawerLayout>
