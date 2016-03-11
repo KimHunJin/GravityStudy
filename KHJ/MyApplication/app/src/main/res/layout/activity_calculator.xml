@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.ac.sungkyul.myapplication.calculator.CalculatorActivity">
+
+    <!-- inputType 은 EditText에 원하는 타입의 문자만 넣을 수 있게 해줍니다.
+
+         editable은 EditText를 클릭할 수 없게 해줍니다.
+         다만 클래스를 통해 문자를 적을 수는 있습니다.
+
+         layout_weight 은 1을 기준으로 각 객체의 비율을 정해줍니다.
+         weight의 총 합은 1이 되어야 하며, 사용을 위해서는
+         vertical일 경우 height가 0dp, horizontal일 경우 width가 0dp 이어야 합니다.
+
+         hint는 EditText를 클릭하기 전 보여주는 안내 문구로
+         EditText를 클릭하게 되면 보이지 않게 됩니다. -->
+
+    <EditText
+        android:id="@+id/edtFirstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="첫번째 수를 입력하세요."
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtSecondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="두번째 수를 입력하세요."
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtCalResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:hint="결과" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnMulti"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="/" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="％" />
+
+        <Button
+            android:id="@+id/btnRoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="√" />
+
+        <Button
+            android:id="@+id/btnSquare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Clear" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

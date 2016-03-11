@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.ac.sungkyul.myapplication.star.MakeStarActivity">
+
+    <EditText
+        android:id="@+id/edtStarNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="층을 입력하세요."
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTypeA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="TYPE A" />
+
+        <Button
+            android:id="@+id/btnTypeB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="TYPE B" />
+
+        <Button
+            android:id="@+id/btnTypeC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="TYPE C" />
+
+        <Button
+            android:id="@+id/btnTypeD"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="TYPE D" />
+
+
+    </LinearLayout>
+
+    <!-- 보통 하나의 선을 긋기 위해서는 View를 사용합니다.
+         background에 색을 입힐 수 있습니다.
+         #00000000 ~ #FFFFFFFF 까지 사용가능하며
+         투명도RGB 값을 의미합니다.
+         즉 앞의 두 자리 12번은 투명도,
+         34번은 R, 56번은 G, 78번은 B 입니다.
+         투명도는 사용하지 않아도 상관없습니다.
+         ex) #123456
+
+         스크롤뷰는 화면에 표시할 수 있는 것을 초과했을 경우
+         스크롤이 생겨 상하로 움직일 수 있게 해줍니다. -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#454545" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/txtStarResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24dp" />
+
+    </ScrollView>
+
+</LinearLayout>
