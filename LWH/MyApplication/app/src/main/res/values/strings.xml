@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">안녕 안드로이드</string>
-    <string name="intput_number">숫자를 입력해주세요 :</string>
+
+    <string name="notice">공지사항</string>
+    <string name="news">새소식</string>
+    <string name="question">질문 게시판</string>
+    <string name="free">자유 게시판</string>
+    <string name="setting">Setting</string>
+    <string name="tree">조직도</string>
 
 </resources>

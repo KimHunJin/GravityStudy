@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case R.id.airport: {
-//                AlertDialog.Builder dlg = new AlertDialog.Builder();
 //                dlg.setTitle("숫자 입력");
 //                dlg.setMessage("숫자 입력해주세요");
 //                dlg.setIcon(R.mipmap.ic_launcher);
