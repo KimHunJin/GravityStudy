@@ -20,4 +20,12 @@ Button btn1;
             }
         });
     }
+
+    public void num(View v){
+        switch (v.getId()){
+            case R.id.btn2:{
+                startActivity(new Intent(getApplicationContext(),MemberActivity.class));
+            }
+        }
+    }
 }

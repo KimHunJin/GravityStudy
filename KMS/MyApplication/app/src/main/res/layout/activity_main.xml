@@ -36,12 +36,14 @@
             android:textColor="@color/white" />
 
         <Button
+            android:id="@+id/btn2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:layout_weight="0.4"
             android:background="@drawable/round_box_blue"
             android:text="공항"
+            android:onClick="num"
             android:textColor="@color/white" />
 
         <Button

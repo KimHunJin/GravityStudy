@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".PrintStar"></activity>
+        <activity android:name=".PrintStar" />
+        <activity android:name=".MemberActivity" />
+        <activity android:name=".IntentTestActivity"></activity>
     </application>
 
 </manifest>
