@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".navigation.CustomNavigationActivity">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <!-- layout_gravity를 start로 하는 것이 중요합니다. -->
 
     <ListView

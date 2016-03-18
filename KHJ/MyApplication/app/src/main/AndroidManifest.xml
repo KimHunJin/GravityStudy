@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".navigation.CustomNavigationActivity" />
         <activity android:name=".calculator.CalculatorActivity" />
-        <activity android:name=".star.MakeStarActivity"></activity>
+        <activity android:name=".star.MakeStarActivity" />
+        <activity android:name=".circularimage.LoginActivity" />
+        <activity android:name=".calculator.abcdadfsa"></activity>
     </application>
 
 </manifest>
