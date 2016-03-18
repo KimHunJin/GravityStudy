@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BaseTest</string>
+    <string name="btn1">홈페이지</string>
+    <string name="btn2">전화번호</string>
+    <string name="btn3">갤러리</string>
+    <string name="btn4">종료</string>
+</resources>
