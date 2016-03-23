@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center">
+
+        <TextView
+            android:textStyle="bold|italic"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:text="Gravity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:hint="@string/studentnum"
+        android:background="@drawable/round_button_base_blue"
+        android:padding="@dimen/sign_text_padding"/>
+
+    <EditText
+        android:id="@+id/edit_pass"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/sign_text_marginTop"
+        android:textSize="20dp"
+        android:hint="@string/password"
+        android:background="@drawable/round_button_base_blue"
+        android:padding="@dimen/sign_text_padding"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/sign_text_marginTop">
+
+        <CheckBox
+            android:id="@+id/cb_autologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="@string/autologin"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:background="@drawable/round_button_base_blue"
+        android:layout_marginTop="@dimen/sign_text_marginTop"
+        android:text="@string/login"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/sign_text_marginTop"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_findpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="@string/forgotpass"/>
+
+        <TextView
+            android:id="@+id/tv_notmem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sign_text_marginTop"
+            android:textSize="15dp"
+            android:text="@string/notmem"/>
+
+    </LinearLayout>
+
+</LinearLayout>
