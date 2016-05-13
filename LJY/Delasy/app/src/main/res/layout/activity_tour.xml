@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/term"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:textSize="15sp"
+            android:text="여행기간:16.02.19~16.02.23    목적지: 마닐라" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/hotel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#FF0000"
+            android:text="호텔"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/airport"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#0000FF"
+            android:text="공항"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/restaurant"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#00FF00"
+            android:text="식당"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/leisure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:background="#FF00FF"
+            android:text="레저 및 투어"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/emergency"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#00FFFF"
+            android:text="비상시"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/shopping"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFF00"
+            android:text="주변 관광지 및 쇼핑몰"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>

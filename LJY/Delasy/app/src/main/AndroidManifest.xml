@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CalActivity"/>
         <activity android:name=".MainActivity" />
         <activity android:name=".test1"></activity>
     </application>
