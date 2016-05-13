@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import kr.ac.sungkyul.myapplication.calculator.CalculatorActivity;
+import kr.ac.sungkyul.myapplication.circularimage.LoginActivity;
 import kr.ac.sungkyul.myapplication.navigation.CustomNavigationActivity;
 import kr.ac.sungkyul.myapplication.star.MakeStarActivity;
 
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CustomNavigationActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
 

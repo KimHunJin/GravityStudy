@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center">
+
+        <com.sk392.kr.gravity.util.RoundImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundimageview"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:background="@drawable/round"
+        android:hint="@string/name"
+        android:padding="@dimen/text_padding"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/edit_studentnum"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/marginTop"
+        android:textSize="20dp"
+        android:background="@drawable/round"
+        android:hint="@string/studentnum"
+        android:padding="@dimen/text_padding"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="20dp"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/round"
+        android:hint="@string/password"
+        android:padding="@dimen/text_padding"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edit_passcheck"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="20dp"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/round"
+        android:hint="@string/passcheck"
+        android:padding="@dimen/text_padding"
+        android:inputType="textPassword" />
+
+    <RadioGroup
+        android:id="@+id/rg_depart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_devel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/develop" />
+
+        <RadioButton
+            android:id="@+id/rb_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="@string/plan" />
+
+        <RadioButton
+            android:id="@+id/rb_design"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="@string/design" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:onClick="register"
+        android:text="@string/signup" />
+
+    <TextView
+        android:id="@+id/tv_ismem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop"
+        android:textSize="15dp"
+        android:gravity="right"
+        android:text="@string/ismem" />
+
+</LinearLayout>

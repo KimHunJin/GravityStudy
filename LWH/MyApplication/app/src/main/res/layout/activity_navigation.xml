@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@drawable/round_color"
+    android:orientation="vertical"
+    tools:context="com.example.tkdlx_000.myapplication.Navigation">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/android_image_toto" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/stdNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="그럼 20000" />
+
+            <TextView
+                android:id="@+id/develop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="개발" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sky"></View>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="0.5"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/noticeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="custom"
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/notice" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="custom"
+
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/news" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="custom"
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/question" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/freeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="custom"
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/free" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sky"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/treeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="custom"
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/tree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tree" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="custom"
+            android:orientation="horizontal">
+
+            <com.example.tkdlx_000.myapplication.RoundImageView
+                android:id="@+id/image6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/android_image_toto" />
+
+            <TextView
+                android:id="@+id/setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/setting" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

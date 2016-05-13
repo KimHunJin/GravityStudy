@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow
+        android:layout_marginTop="50dp"
+
+        android:layout_weight="0.2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입력 값"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="0~10" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0.3"
+        android:gravity="center_horizontal">
+
+        <TextView android:id="@+id/star" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0.1"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="custom"
+            android:text="계산" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="custom"
+            android:text="뒤로가기" />
+    </TableRow>
+
+</TableLayout>
